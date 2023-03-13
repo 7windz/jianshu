@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import logoPic from '../../statics/logo.png';
+import { CgSearch } from "react-icons/cg";
 
 export const HeaderWrapper = styled.div`
     position: relative;
@@ -46,21 +47,80 @@ export const NavItem = styled.div`
     }
 `;
 
+export const SerachWrapper = styled.div`
+    position: relative;
+    float: left;
+    width: 180px;
+    height: 38px;
+    background: #eee;
+    padding: 0 20px;
+    margin-top: 9px;
+    border-radius: 19px;
+    
+    
+    .iconfont {
+        float: right;
+        position: aboslute;
+        line-height: 20px;
+        line-width: 20px;
+        text-align: center;
+        margin-top: 4px;
+        padding-top: 10px;
+        border-radius: 15px;
+        position: abosulte;
+        right: 5px;
+        width: 30px;
+        bottem: 5px;
+    } 
+    &.focused {
+        width: 240px;
+        .iconfont {
+            background: #777;
+            color: #fff;
+        }
+    }
+`
+
 export const NavSearch = styled.input.attrs({
     placeholder: 'search'
 })`
-    width: 160p;
+    .slide-enter {
+        transition: all 300ms ease-out; 
+    }
+    .slide-enter-active {
+        width: 180px;
+    }
+    .slide-exit {
+        transition: all 300ms ease-out; 
+     }
+     .slide-exit-active {
+         width: 150px;
+     }
     height: 38px;
-    padding: 0 20px;
-    margin-top: 9px;
+    width: 150px;
+    padding: 0 35px 0 20px;
     box-sizing: border-box;
     border: none;
     outline: none;
-    border-radius: 19px;
     background: #eee;
     font-size: 15px;
     &::placeholder {
         color: #999;
+    }
+    &.focused {
+        width: 180px;
+    }
+    &.slide-enter {
+        transition: all 300ms ease-out; 
+    }
+    &.slide-enter-active {
+         width: 240px;
+    }
+    &.slide-exit {
+         transition: all 300ms ease-out; 
+    }
+    &.slide-exit-active {
+          width: 180px;
     }
 `;
 
